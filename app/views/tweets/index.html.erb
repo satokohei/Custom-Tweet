@@ -1,7 +1,10 @@
 <div class="">
   <ul class="">
-    <li><%= @tweets.image %></li>
-    <li><%= @tweets.name %></li>
-    <li><%= @tweets.drink_name %></li>
-    <li><%= @tweets.custom_name %></li>
+  <%@tweets.each do |tweet|%>
+    <li><%= tweet.image %></li>
+    <li><%= tweet.name %></li>
+    <li><%= tweet.drink_name %></li>
+    <li><%= tweet.custom_name %></li>
+  <% end %>
   </ul>
+</div>

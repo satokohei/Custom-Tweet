@@ -1,0 +1,10 @@
+<div class="">
+ <%= form_tag('/tweets', method: :post) do %>
+ <h3>投稿する</h3>
+ <input placeholder="Username" type="text" name="name">
+ <input placeholder="Drinkname" type="text" name="drink_name">
+ <input placeholder="Customname" type="text" name="custom_name">
+ <input placeholder="Image URL" tyoe="text" name="image">
+ <input type="submit" value="SENT">
+ <% end %>
+</div>
