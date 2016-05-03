@@ -1,10 +1,10 @@
 <div class="">
   <ul class="">
   <%@tweets.each do |tweet|%>
-    <li><%= tweet.image %></li>
-    <li><%= tweet.name %></li>
-    <li><%= tweet.drink_name %></li>
-    <li><%= tweet.custom_name %></li>
+    <li>画像<%= tweet.image %></li>
+    <li>ユーザー名<%= tweet.name %></li>
+    <li>ドリンク名<%= tweet.drink_name %></li>
+    <li>追加したカスタム<%= tweet.custom_name %></li>
   <% end %>
   </ul>
 </div>
