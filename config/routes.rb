@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
-<<<<<<< HEAD
+
   get 'tweets' =>'tweets#index'
   get 'tweets/new' => 'tweets#new'
   post 'tweets' => 'tweets#create'
   get 'users/:id' => 'users#show'
-=======
+
   root 'tweets#index'
   resources :tweets do
     resources :comments, only: [:create]
@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   #create'
 
->>>>>>> コメント機能
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -10,33 +10,24 @@
 <body>
 <header class="">
  <div class="">
-<<<<<<< HEAD
-  <h1>CustomTweet</h1>
-  <%# if user_signed_in? %>
-  <div>
-=======
+
+  
    <h1>CustomTweet</h1>
    <% if user_signed_in? %>
    <div>
->>>>>>> コメント機能
+
    <a class="post" href="/tweets/new">投稿</a>
   </div>
-  <%# else %>
+  <% else %>
   <div>
   <%= link_to "ログイン", new_user_session_path, class: 'post' %>
   <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
   </div>
-  <%# end %>
+  <% end %>
  </div>
 </header>
 
-
-
-
-
-
-
 <%= yield %>
 
-</body>
-</html>
+  </body>
+  </html>

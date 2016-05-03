@@ -1,26 +1,10 @@
 class UsersController < ApplicationController
 
 def show
-<<<<<<< HEAD
-  @tweets= Tweet.where()
-=======
-  binding.pry
-  user = User.find()
+  user = User.find(params[:id])
   @tweets = user.tweets
->>>>>>> コメント機能
 end
 
 
 
-
-
-
-
-
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> コメント機能
 end

@@ -2,7 +2,11 @@
   <ul class="">
   <%@tweets.each do |tweeet|%>
     <li>画像<%= tweeet.image %></li>
-    <li>ユーザー名<%= tweeet.name %></li>
+    <li>
+
+    <%= link_to 'ユーザー名', user_path(tweeet.user.id), method: :get %>
+    <%= tweeet.name %>
+    </li>
     <li>ドリンク名<%= tweeet.drink_name %></li>
     <li>追加したカスタム<%= tweeet.custom_name %></li>
     <li>
