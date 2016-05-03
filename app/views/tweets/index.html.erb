@@ -1,10 +1,20 @@
 <div class="">
   <ul class="">
-  <%@tweets.each do |tweet|%>
-    <li>画像<%= tweet.image %></li>
-    <li>ユーザー名<%= tweet.name %></li>
-    <li>ドリンク名<%= tweet.drink_name %></li>
-    <li>追加したカスタム<%= tweet.custom_name %></li>
+  <%@tweets.each do |tweeet|%>
+    <li>画像<%= tweeet.image %></li>
+    <li>ユーザー名<%= tweeet.name %></li>
+    <li>ドリンク名<%= tweeet.drink_name %></li>
+    <li>追加したカスタム<%= tweeet.custom_name %></li>
+    <li>
+      
+<% if current_user %>
+ <%= form_tag("/tweets/@tweet.id/comments", method: :post) do %>
+ <textarea cols="30" name="text" placeholder="コメントする"　rows="2"></textarea>
+ <imput type="submit" value="SENT">
+ <% end %>
+<% end %>
+
+    </li>
   <% end %>
   </ul>
 </div>
