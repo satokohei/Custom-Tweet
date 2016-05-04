@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+header {
+  background-color: #32cd32;
+  height: 150px;
+}
+
+
+.title {
+  font-family: fantasy;
+}
