@@ -1,14 +1,14 @@
 <div class="">
   <ul class="">
-  <%@tweets.each do |tweeet|%>
-    <li>画像<%= tweeet.image %></li>
+  <%@tweets.each do |tweet|%>
+    <li>画像<%= tweet.image %></li>
     <li>
 
-    <%= link_to 'ユーザー名', user_path(tweeet.user.id), method: :get %>
-    <%= tweeet.name %>
+    <%= link_to 'ユーザー名', user_path(tweet.user.id), method: :get %>
+    <%= tweet.name %>
     </li>
-    <li>ドリンク名<%= tweeet.drink_name %></li>
-    <li>追加したカスタム<%= tweeet.custom_name %></li>
+    <li>ドリンク名<%= tweet.drink_name %></li>
+    <li>追加したカスタム<%= tweet.custom_name %></li>
     <li>
       
 <% if current_user %>

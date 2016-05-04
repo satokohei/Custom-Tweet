@@ -1,11 +1,14 @@
 <div class="">
-
+<p><%= @user.name %>のおすすめ</p>
+   
   <ul class="">
   <%@tweets.each do |tweet|%>
-    <li>画像<%= tweet.image %></li>
-    <li>ユーザー名<%= tweet.name %></li>
-    <li>ドリンク名<%= tweet.drink_name %></li>
-    <li>追加したカスタム<%= tweet.custom_name %></li>
+    <li>画像
+    <%= tweet.image %></li>
+    <li>ドリンク名
+    <%= tweet.drink_name %></li>
+    <li>追加したカスタム
+    <%= tweet.custom_name %></li>
   <% end %>
   </ul>
 </div>
