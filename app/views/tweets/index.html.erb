@@ -1,22 +1,22 @@
 <div class="">
   <ul class="">
   <%@tweets.each do |tweet|%>
-    <li>画像<%= tweet.image %></li>
-    <li>
+    <li class="">画像<%= tweet.image %></li>
+    <li class="">
 
     <%= link_to 'ユーザー名', user_path(tweet.user.id), method: :get %>
     <%= tweet.name %>
     </li>
-    <li>ドリンク名<%= tweet.drink_name %></li>
-    <li>追加したカスタム<%= tweet.custom_name %></li>
-    <li>
+    <li class="">ドリンク名<%= tweet.drink_name %></li>
+    <li class="">追加したカスタム<%= tweet.custom_name %></li>
+    <li class="">
       
-<% if current_user %>
+<%# if current_user %>
  <%= form_tag("/tweets/@tweet.id/comments", method: :post) do %>
  <textarea cols="30" name="text" placeholder="コメントする"　rows="2"></textarea>
- <imput type="submit" value="SENT">
+ <input type="submit" value="SENT">
  <% end %>
-<% end %>
+<%# end %>
 
     </li>
   <% end %>
