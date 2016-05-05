@@ -1,11 +1,11 @@
-<div style="width: 300px; margin: auto;"class="">
+<div class="" style="width: 300px; margin: auto;"class="">
   <h2><%= @user.name %>のおすすめ</h2>
-   
-  <ul class="">
   <%@tweets.each do |tweet|%>
-    <li class=""style="background-image: url(<%= tweet.image %>); background-repeat: no-repeat; width: 300px;
+    <div class=""style="background-image: url(<%= tweet.image %>); background-repeat: no-repeat; width: 300px;
     height: 300px; list-style:none">
-    </li>
+    </div>
+    <div class="">
+    <ul class="">
     <li class="">ドリンク名
     <%= tweet.drink_name %></li>
     <li class="">追加したカスタム
@@ -21,6 +21,7 @@
     </li>
   <%end%>
   </ul>
+  </div>
 
   <%= link_to '前のページに戻る', "/tweets
   ", method: :get %>
