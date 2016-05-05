@@ -3,14 +3,14 @@
    
   <ul class="">
   <%@tweets.each do |tweet|%>
-    <li style="background-image: url(<%= tweet.image %>); background-repeat: no-repeat; width: 300px;
+    <li class=""style="background-image: url(<%= tweet.image %>); background-repeat: no-repeat; width: 300px;
     height: 300px; list-style:none">
     </li>
-    <li>ドリンク名
+    <li class="">ドリンク名
     <%= tweet.drink_name %></li>
-    <li>追加したカスタム
+    <li class="">追加したカスタム
     <%= tweet.custom_name %></li>
-    <li>＜コメント一覧＞
+    <li class="">＜コメント一覧＞
       <%if @comments %>
         <% @comments.each do |comment| %>
           <p>

@@ -1,17 +1,17 @@
 <div style="width: 300px; margin: auto;">
-  <ul class="custom-list">
+  <ul class="media-list">
   <%@tweets.each do |tweet|%>
-    <li style="background-image: url(<%= tweet.image %>); background-repeat: no-repeat; width: 300px;
+    <li class="media" style="background-image: url(<%= tweet.image %>); background-repeat: no-repeat; width: 300px;
     height: 300px; list-style:none">
   　</li>
-    <li class="">
+    <li class="media">
 
     <%= link_to 'ユーザー名', user_path(tweet.user.id), method: :get %>
     <%= tweet.name %>
     </li>
-    <li class="">ドリンク名<%= tweet.drink_name %></li>
-    <li class="">追加したカスタム<%= tweet.custom_name %></li>
-    <li style="list-style:none">
+    <li class="media">ドリンク名<%= tweet.drink_name %></li>
+    <li class="media">追加したカスタム<%= tweet.custom_name %></li>
+    <li class="media">
       
 <% if current_user %>
  <%= form_tag("/tweets/#{tweet.id}/comments", method: :post) do %>
