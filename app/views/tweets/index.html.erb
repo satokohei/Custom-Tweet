@@ -1,7 +1,8 @@
 <div class="">
   <ul class="">
   <%@tweets.each do |tweet|%>
-    <li class="">画像<%= tweet.image %></li>
+    <li style="background-image: url(<%= tweet.image %>);">
+  　</li>
     <li class="">
 
     <%= link_to 'ユーザー名', user_path(tweet.user.id), method: :get %>

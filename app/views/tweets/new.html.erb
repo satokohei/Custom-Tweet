@@ -1,10 +1,27 @@
 <div class="">
- <%= form_tag('/tweets', method: :post) do %>
+ <%= form_for @tweet do |f| %>
  <h3>投稿する</h3>
- <input placeholder="Username" type="text" name="name">
- <input placeholder="Drinkname" type="text" name="drink_name">
- <input placeholder="Customname" type="text" name="custom_name">
- <input placeholder="Image URL" tyoe="text" name="image">
- <input type="submit" value="SENT">
+ <%= f.text_field :name, placeholder: "Username" %>
+ <%= f.text_field :drink_name, placeholder: "Drinkname" %>
+ <%= f.text_field :custom_name, placeholder: "Customname" %>
+ <%= f.text_field :image, placeholder: "IMG URL", class: "image" %>
+
+
+ <%= f.submit "送信" %>
+
+
  <% end %>
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
