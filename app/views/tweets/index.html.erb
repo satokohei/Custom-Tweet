@@ -13,14 +13,15 @@
     <li class="">追加したカスタム<%= tweet.custom_name %></li>
     <li style="list-style:none">
       
-<%# if current_user %>
- <%= form_tag("/tweets/@tweet.id/comments", method: :post) do %>
+<% if current_user %>
+ <%= form_tag("/tweets/#{tweet.id}/comments", method: :post) do %>
  <textarea cols="30" name="text" placeholder="このカスタマイズについて自由にコメントお願いします"rows="2"></textarea>
  <input type="submit" value="SENT">
  <% end %>
-<%# end %>
+<% end %>
 
     </li>
   <% end %>
   </ul>
+ <%= paginate(@tweets) %>
 </div>

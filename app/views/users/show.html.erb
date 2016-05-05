@@ -10,7 +10,16 @@
     <%= tweet.drink_name %></li>
     <li>追加したカスタム
     <%= tweet.custom_name %></li>
-  <% end %>
+    <li>＜コメント一覧＞
+      <%if @comments %>
+        <% @comments.each do |comment| %>
+          <p>
+            <%= comment.text %>
+          </p>
+        <% end %>
+      <% end %>
+    </li>
+  <%end%>
   </ul>
 
   <%= link_to '前のページに戻る', "/tweets

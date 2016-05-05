@@ -1,5 +1,5 @@
 class Tweet < ActiveRecord::Base
 belongs_to :user
-has_many :commnts
+has_many :comments
 
 end
